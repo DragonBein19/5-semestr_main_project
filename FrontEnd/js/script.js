@@ -1,6 +1,6 @@
 /* ==== typing animation ==== */
 var typed = new Typed(".typing",{
-    strings:["", "Student", "Student"],
+    strings:["", "Student", "Future professional"],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
@@ -9,14 +9,13 @@ var typed = new Typed(".typing",{
 const   nav = document.querySelector(".nav"),
         navList = nav.querySelectorAll("li"),
         totalNavList = navList.length,
-        allSection = document.querySelectorAll(".section"),
-        totalSection = allSection.length;
+        allSection = document.querySelectorAll(".section");
         for(let i=0; i<totalNavList; i++)
         {
             const a = navList[i].querySelector("a");
             a.addEventListener("click", function()
             {
-                for(let i=0; i<totalSection; i++)
+                for(let i=0; i<allSection.length; i++)
                 {
                     allSection[i].classList.remove("back-section");
                 }
@@ -34,7 +33,7 @@ const   nav = document.querySelector(".nav"),
         }
         function showSection(element)
         {
-            for(let i=0; i<totalSection; i++)
+            for(let i=0; i<allSection.length; i++)
             {
                 allSection[i].classList.remove("active");
             }
@@ -42,11 +41,12 @@ const   nav = document.querySelector(".nav"),
             document.querySelector("#" + target).classList.add("active")
         }
         const navTogglerBtn = document.querySelector(".nav-toggler"),
-            aside = document.querySelector(".aside");
+            aside = document.querySelector("aside");
             navTogglerBtn.addEventListener("click", () =>
             {
                 asideSectionTogglerBtn();
             })
+
             function asideSectionTogglerBtn()
             {
                 aside.classList.toggle("open");
