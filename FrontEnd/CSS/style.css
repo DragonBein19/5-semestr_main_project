@@ -644,34 +644,31 @@ h3.my-proffesion {
     flex: 0 0 33.33%;
     max-width: 33%;
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.portfolio .portfolio-item-inner .portfolio-img {
-
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img {
-    flex: 1;
     width: 100%;
     display: block;
     overflow: hidden;
 }
+.portfolio .portfolio-item-inner a i {
+    cursor: pointer;
+}
 
 .portfolio .portfolio-item-inner .portfolio-text {
-    flex: 1;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 15px;
+}
+
+.portfolio .portfolio-item-inner .project-btn {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 /* contact */
