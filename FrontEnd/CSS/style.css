@@ -653,9 +653,13 @@ h3.my-proffesion {
     overflow: hidden;
 }
 
+.portfolio .portfolio-item-inner .portfolio-img {
+    z-index: 2;
+}
+
 .portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
-    display: block;
+
     overflow: hidden;
 }
 .portfolio .portfolio-item-inner a i {
@@ -664,6 +668,7 @@ h3.my-proffesion {
 
 .portfolio .portfolio-item-inner .portfolio-text {
     padding: 15px;
+    z-index: 1;
 }
 
 .portfolio .portfolio-item-inner .project-btn {
