@@ -80,6 +80,14 @@ ul {
     display: none !important;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
 
 .padd-15 {
     padding-left: 15px;
@@ -432,6 +440,11 @@ h3.my-proffesion {
     flex: 0 0 40%;
     max-width: 40%;
     margin-top: 40px;
+}
+
+.about .about-content .skills h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .about .about-content .skills .skill-item {
