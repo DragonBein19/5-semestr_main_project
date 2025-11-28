@@ -437,8 +437,8 @@ h3.my-proffesion {
 }
 
 .about .about-content .personal-info .languages{
-    flex: 0 0 60%;
-    max-width: 60%;
+    flex: 0 0 80%;
+    max-width: 80%;
     margin-top: 40px;
 }
 
@@ -689,6 +689,7 @@ h3.my-proffesion {
     color: var(--text-black-700);
     line-height: 25px;
 }
+
 /* portfolio */
 .portfolio .container {
     padding-bottom: 40px;
@@ -712,33 +713,107 @@ h3.my-proffesion {
     padding: 10px;
 }
 
-.portfolio .portfolio-item-inner{
-    border: 6px solid var(--bg-black-100);
+.portfolio .portfolio-item-inner {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    position: relative;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    border: 6px solid var(--bg-black-100);
 }
 
+/* Изображение */
 .portfolio .portfolio-item-inner .portfolio-img {
-    z-index: 2;
-}
-
-.portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
-
-    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.5s ease;
 }
-.portfolio .portfolio-item-inner a i {
+
+/* Увеличение картинки при наведении */
+.portfolio .portfolio-item-inner:hover .portfolio-img {
+    transform: scale(1.06);
+}
+
+/* Нижняя панель */
+.portfolio .portfolio-item-inner .split-card__panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 12%;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-sizing: border-box;
+
+    /* ✨ Прозрачная, замыленная стеклянная панель */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    transition: height .45s ease;
+}
+
+/* ПАНЕЛЬ ВСПЛЫВАЕТ ВВЕРХ ПРИ HOVER */
+.portfolio .portfolio-item-inner:hover .split-card__panel {
+    height: 60%;
+}
+
+/* Текст */
+.portfolio .portfolio-item-inner .split-card__panel .split-card__text {
+    flex: 1 1 auto;
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
+.portfolio .portfolio-item-inner .split-card__panel h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.portfolio .portfolio-item-inner .split-card__panel p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.65;
+    transition: opacity .45s ease;
+}
+
+/* Текст проявляется */
+.portfolio .portfolio-item-inner:hover .split-card__panel p {
+    opacity: 1;
+}
+
+/* Кнопка внизу панели */
+.portfolio .portfolio-item-inner .split-card__panel .project-btn {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .portfolio-item-inner .split-card__panel .project-btn {
+    margin-bottom: -10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 2px;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(0,120,255,0.16);
 }
 
-.portfolio .portfolio-item-inner .portfolio-text {
-    padding: 15px;
-    z-index: 1;
-}
-
-.portfolio .portfolio-item-inner .project-btn {
-    text-align: center;
-    margin-bottom: 5px;
+.split-card:hover .split-card__media {
+    transform: scale(1.04);
 }
 
 /* contact */
