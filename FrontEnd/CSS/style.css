@@ -751,8 +751,8 @@ h3.my-proffesion {
     gap: 14px;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
     transition: height 0.45s ease;
 }
 
